@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans&family=Ubuntu:wght@300;400;500&display=swap');
+:root{
+    --primaryfonts: 'Ubuntu', sans-serif;
+    --secondaryfonts: 'Abril Fatface', cursive;
+    --thirdfonts: 'Open Sans', sans-serif;
+    --primarycolor: #0e2f44;
+    --secondarycolor: #ffc815;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, ol{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body{
+    font-family: var(--primaryfonts);
+}
+/* *COMMON CSS STARTS */
+.container {
+    width: 1170px;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+}
+.button {
+    color: var(--primarycolor);
+    font-weight: 500;
+    font-size: 20px;
+    background-color: var(--secondarycolor);
+    display: inline-block;
+    border-radius: 10px;
+    padding: 17px 20px;
+    
+}
+.question {
+    color: var(--primarycolor);
+    font-weight: 300;
+    font-size: 14px;
+}
+.heading {
+    color: var(--primarycolor);
+    font-family: var(--secondaryfonts);
+    font-weight: 400;
+    font-size: 32px;
+}
+.details {
+    color: var(--primarycolor);
+    font-family: var(--thirdfonts);
+    font-weight: 400;
+    font-size: 16px;
+    padding: 30px 0;
+}
+/* *COMMON CSS ENDS */
+/* *HEADER STARTS */
+#top_header{
+    background-color: var(--primarycolor);
+    padding: 20px 0;
+}
+.welcome {
+    width: 50%;
+    color: #fefefe;
+    font-weight: 400;
+    font-size: 16px;
+}
+.open {
+    width: 50%;
+    text-align: right;
+    color: #fefefe;
+    font-weight: 400;
+    font-size: 16px;
+}
+/* *HEADER ENDSS */
+/* *NAVBAR STARTS */
+
+nav .logo {
+    width: 40%;
+    padding: 20px 0;
+}
+
+nav .menu {
+    width: 60%;
+    text-align: right;
+}
+nav .menu ul li {
+    display: inline-block;
+    padding: 25px 15px;
+}
+nav .menu ul li a {
+    color: var(--primarycolor);
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: capitalize;  
+    position: relative; 
+    z-index: 1; 
+}
+nav .menu ul li span{
+    color: var(--primarycolor);
+}
+nav .menu ul li a::before{
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: #ffc815c5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+nav .menu ul li:hover a::before{
+    width: 100%;
+}
+/* *NAVBAR ENDS */
+/* *BANNER STARTS */
+#banner {
+    height: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#banner .container{
+    height: 100%;
+}
+#banner .row{
+    height: 100%;
+}
+.banner_cnt {
+    width: 40%;
+    align-items: center;
+}
+.banner_cnt h2 {
+    color: var(--primarycolor);
+    font-weight: 300;
+    font-size: 50px;
+}
+.banner_cnt h1{
+    color: var(--primarycolor);
+    font-family: var(--secondaryfonts);
+    font-weight: 400;
+    font-size: 80px;
+}
+.banner_cnt h4 {
+    color: #8484bf;
+    font-weight: 400;
+    font-size: 32px;
+    letter-spacing: 10px;
+}
+.banner_cnt p{
+    color: #444444;
+    font-family: var(--thirdfonts);
+    font-weight: 400;
+    font-size: 14px;
+    padding: 23px 0;
+}
+.banner_cnt .button{
+    color: #ffffff;
+    background-color: #8484bf;
+}
+.banner_cnt .play-button {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    color: #8484bf;
+    box-shadow: 1px 5px 15px 4px rgba(0,0,0,0.23);
+    margin: 0 15px;
+}
+/* *BANNER ENDS */
+/* *ABOUT US STARTS */
+#about {
+    padding: 105px 0;
+}
+.about_cnt{
+    width: 50%;
+}
+.about_list .list {
+    padding: 15px 30px;
+    font-family: var(--thirdfonts);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--primarycolor);
+
+}
+#about .button {
+    margin: 15px 0;
+}
+#about .read_button{
+    background-color: #ffffff;
+    padding: 13px 17px;
+    box-shadow: 2px 3px 9px 0px rgba(0,0,0,0.71);
+    margin-left: 18px;
+}
+/* *ABOUT US ENDS */
+/* *OUR SKILL STARTS */
+#skill {
+    padding: 40px 0;
+    
+}
+.skill_img{
+    width: 50%;
+    padding: 30px 0;
+    margin-left: -115px;
+   
+}
+.skill_cnt{
+    width: 50%;
+    text-align: right;
+    padding: 0 5px;
+    margin-left: 100px;
+    
+    
+}
+#skill .skill_cnt .rate {
+    margin-left: 90px;
+}
+/* *OUR SKILL ENDS */
+/* *SERVICE STARTS */
+#service {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+.service_card {
+    background-color: #ededed;
+    margin: 22px 15px;
+    border-radius: 15px;
+    width: calc(33.33% - 30px) ;
+    position: relative;
+}
+.service_card .icon {
+    width: 20%;
+    text-align: center;
+    background-color: #e9e9e9;  
+      
+}
+.service_card .content {
+    width: 80%;
+    padding: 30px 22px;
+    background-color: #ededed;
+    border-radius: 0 15px 15px 0;
+    text-align: left;
+    
+}
+.service_card .content .title_head {
+    font-family: var(--primaryfonts);
+    font-weight: 500;
+    font-size: 20px;
+    color: #222222;
+}
+.service_card .content .card_details {
+    font-family: var(--thirdfonts);
+    font-weight: 400;
+    font-size: 14px;
+    color: #444444;
+}
+.service_card .overlay {
+    background-color: var(--primarycolor);
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 15px;
+    padding-top: 25px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.service_card:hover .overlay{
+    transform: scale(1);
+}
+.overlay a{
+    color: #222222;
+    background-color: var(--secondarycolor);
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-top: 80px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    transition-delay: 0.4s;
+}
+.service_card:hover .overlay a{
+    opacity: 1;
+    visibility: visible;
+    margin-top: 30px;
+}
+
+/* *SERVICE ENDS */
